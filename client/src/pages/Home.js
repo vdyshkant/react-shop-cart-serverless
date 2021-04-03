@@ -1,4 +1,5 @@
 import React from 'react'
+import ProductList from '../components/ProductList'
 
 export default function Home() {
   return (
@@ -10,13 +11,15 @@ export default function Home() {
           </h1>
           <p className="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-400 text-opacity-80">
             A full-stack ecommerce app made with a Create-React-App client and Node API, using Stripe to process
-            payments.
+            payments.Products
           </p>
           <div className="flex mt-6 justify-center">
             <div className="w-16 h-1 rounded-full bg-indigo-500 inline-flex" />
           </div>
         </div>
-        <div className="flex flex-wrap -m-4">Products</div>
+        <div className="flex flex-wrap -m-4">
+          <ProductList />
+        </div>
       </div>
     </section>
   )
