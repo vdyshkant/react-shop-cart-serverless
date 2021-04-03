@@ -4,7 +4,6 @@ import { Link } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import LoadingSpinner from './LoadingSpinner'
 import formatProductPrice from '../utils/formatProductPrice'
-
 export default function ProductList() {
   const { data: products, isLoading } = useQuery('Products', () =>
     axios('/api/products').then((res) => res.data.products)

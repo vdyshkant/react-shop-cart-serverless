@@ -34,8 +34,8 @@ export default function Product() {
             <div className="flex mt-6 items-center pb-5 border-b-2 border-gray-800 mb-5"></div>
             <div className="flex">
               <span className="title-font font-medium text-2xl text-white">{price}</span>
-              <AddToCart />
-              <RemoveFromCart />
+              <AddToCart product={product} />
+              <RemoveFromCart product={product} />
             </div>
           </div>
         </div>
