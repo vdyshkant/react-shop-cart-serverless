@@ -7,6 +7,7 @@ import { QueryClientProvider, QueryClient } from 'react-query'
 import { loadStripe } from '@stripe/stripe-js'
 import { CartProvider } from 'use-shopping-cart'
 import { Toaster } from 'react-hot-toast'
+import Navbar from './components/Navbar'
 
 const queryClient = new QueryClient()
 
@@ -19,6 +20,7 @@ function App() {
     <QueryClientProvider client={queryClient}>
       <CartProvider mode="checkout-session" stripe={stripePromise} currency="USD">
         <BrowserRouter>
+          <Navbar />
           <Toaster position="bottom-center" />
           <Switch>
             <Route exact path="/" component={Home} />
