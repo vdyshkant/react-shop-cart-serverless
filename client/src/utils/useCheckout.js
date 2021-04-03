@@ -4,7 +4,6 @@ import { useShoppingCart } from 'use-shopping-cart'
 
 export default function useCheckout() {
   const { redirectToCheckout, cartDetails } = useShoppingCart()
-  console.log('cartDetails === ', cartDetails)
 
   async function handleCheckout() {
     const session = await axios
