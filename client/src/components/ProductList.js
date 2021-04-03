@@ -3,6 +3,7 @@ import axios from 'axios'
 import { Link } from 'react-router-dom'
 import { useQuery } from 'react-query'
 import LoadingSpinner from './LoadingSpinner'
+import formatProductPrice from '../utils/formatProductPrice'
 
 export default function ProductList() {
   const { data: products, isLoading } = useQuery('Products', () =>
@@ -17,7 +18,8 @@ export default function ProductList() {
 }
 
 function ProductItem({ product }) {
-  const { category, name, description, price, image } = product
+  const { category, name, description, image } = product
+  const price = formatProductPrice(product)
 
   return (
     <div className="p-4 md:w-1/3">
