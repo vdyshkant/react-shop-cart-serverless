@@ -17,8 +17,6 @@ export default function Product() {
   if (isLoading) return <LoadingSpinner />
   if (isError) return <div className="text-red-500 font-bold text-center mx-auto">Ooops! {error.message}</div>
 
-  console.log(product)
-
   const { name, image, category, description } = product
   const price = formatProductPrice(product)
 
