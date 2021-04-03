@@ -3,7 +3,6 @@ import { useShoppingCart } from 'use-shopping-cart'
 import formatProductPrice from '../utils/formatProductPrice'
 
 export default function CartItem({ cartItem }) {
-  // console.log('02 ', cartItem)
   const { name, quantity, image } = cartItem
   const price = formatProductPrice(cartItem)
   const { setItemQuantity } = useShoppingCart()

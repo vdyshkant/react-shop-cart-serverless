@@ -11,7 +11,6 @@ export default function CartSummary() {
 
   return (
     <>
-      {console.log('01 ', formattedTotalPrice)}
       <nav onClick={toggleModal} className="md:ml-auto flex flex-wrap items-center text-base justify-center">
         <span className="mr-5 hover:text-white flex items-center">
           <CartIcon />
